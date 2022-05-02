@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 :root {
     --ff-heading: 'Epilogue','sans-serif';
     --ff-texting: 'Open sans','sans-serif';
@@ -6,22 +11,44 @@
     --fc-secondary: hsl(var(--hue), 50%, 80%);
     --bg-primary: hsl(var(--hue), 69%, 10%);
 
+    font-size: 62.5%;
+
+    --fs-body: 1.6rem;
+    --fs-heading: 4rem;
+
 }
 
 body {
     font-family: var(--ff-texting);
     color: var(--fc-primary);
     background-color: var(--bg-primary);
+
+    font-size: var(--fs-body);
 }
 
 header {
+    margin: 10.6rem 0 8rem;
     font-family: var(--ff-heading);
-    color: var(--fc-primary);
+
+    text-align: center;
 }
 
 
-header h5 {
+header p {
     color: var(--fc-secondary);
+    text-transform: uppercase;
+    font-weight: 400;
+
+    line-height: 3.2rem;
+    letter-spacing: 3px;
+
+    margin-bottom: 1.7rem;
+}
+
+header h1 {
+    font-weight: 800;
+    font-size: var(--fs-heading);
+    line-height: 4.8rem;
 }
 
 
