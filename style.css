@@ -1,3 +1,28 @@
 :root {
-    --fc-primary: hsl(249, 71%, 47%);
+    --ff-heading: 'Epilogue','sans-serif';
+    --ff-texting: 'Open sans','sans-serif';
+    --hue: 250 ;
+    --fc-primary: hsl(var(--hue), 0%, 100%);
+    --fc-secondary: hsl(var(--hue), 50%, 80%);
+    --bg-primary: hsl(var(--hue), 69%, 10%);
+
 }
+
+body {
+    font-family: var(--ff-texting);
+    color: var(--fc-primary);
+    background-color: var(--bg-primary);
+}
+
+header {
+    font-family: var(--ff-heading);
+    color: var(--fc-primary);
+}
+
+
+header h5 {
+    color: var(--fc-secondary);
+}
+
+
+
