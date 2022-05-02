@@ -9,6 +9,7 @@
     --hue: 250 ;
     --fc-primary: hsl(var(--hue), 0%, 100%);
     --fc-secondary: hsl(var(--hue), 50%, 80%);
+    --fc-secondary-dark: hsl(var(--hue),100%,11%);
     --bg-primary: hsl(var(--hue), 69%, 10%);
 
     font-size: 62.5%;
@@ -24,6 +25,16 @@ body {
     background-color: var(--bg-primary);
 
     font-size: var(--fs-body);
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.page {
+    max-width: 33rem;
+    margin: 0 auto;
 }
 
 header {
@@ -51,5 +62,85 @@ header h1 {
     line-height: 4.8rem;
 }
 
+main {
+    display: grid;
+    gap: 3.2rem;
+}
+
+.card {
+    position: relative;
+    font-family: var(--ff-heading);
+}
+
+.card img {
+    height: 41.6rem;
+    object-fit: cover;
+
+    border-radius: 6px;
+
+    transition: transform 200ms;
+}
+
+.card img:hover {
+    transform: scale(1.1);
+    opacity: 0.4;
+}
+
+.card h2 {
+    position: absolute;
+    left: 2.8rem;
+    bottom: 5.2rem;
+
+    font-size: var(--fs-heading);
+    font-weight: 800;
+    display: flex;
+    flex-direction: column;
+    gap: 2.8rem;
+}
+
+.card h2 span {
+    border-radius:  2rem;
+    background-color: var(--fc-primary);
+    font-size: var(--fs-body);
+    font-weight: 400;
+    color: var(--fc-secondary-dark);
+    padding: 0 1.6rem;
+    height: 3.8rem;
+    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+}
+
+header {
+    animation: topdown 700ms;
+}
+
+main {
+    animation: downtop 700ms 350ms backwards;
+}
+
+@keyframes topdown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes downtop{
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 
